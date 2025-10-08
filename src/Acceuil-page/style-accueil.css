@@ -1,0 +1,41 @@
+  /* HERO pleine largeur avec image de fond */
+.hero-accueil {
+  min-height: 70vh;                 /* hauteur confortable sur desktop */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;               /* nécessaire pour l’overlay */
+}
+
+/* Overlay noir 0.3 au-dessus de l’image */
+.hero-accueil .hero-overlay {
+  position: absolute;
+  inset: 0;                         /* top/right/bottom/left: 0 */
+  background: rgba(0,0,0,.3);       /* transparence 0.3 */
+}
+
+/* Met le contenu au-dessus de l’overlay */
+.hero-accueil .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section A propos (fond #EEE léger comme la maquette) */
+.section-apropos {
+  background: #f7f7f7;
+}
+
+/* Petite barre bleue à côté du titre "À propos" */
+.barre-title {
+  display: inline-block;
+  width: 120px;
+  height: 3px;
+  background: #0d6efd;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+/* Optionnelle : pour que l'image du haut de la carte se cadre joliment si on fixe une hauteur */
+.object-fit-cover {
+  object-fit: cover;
+}

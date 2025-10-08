@@ -1,0 +1,61 @@
+  /* ===========================
+   Arrière-plan de la page Contact
+   - image couvrante
+   - voile BLEU demandé : rgba(0, 105, 255, 0.5)
+   - s’applique à toute la zone autour de la carte
+=========================== */
+.contact-page-bg{
+  position: relative;
+  background-image: url("./contact-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 48px 0;            /* respire autour de la carte */
+  overflow: hidden;           /* masque le pseudo-élément */
+}
+
+/* Voile bleu translucide PAR-DESSUS l’image de fond */
+.contact-page-bg::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 105, 255, 0.5); /* EXACTEMENT comme la consigne */
+  pointer-events: none;                /* ne bloque pas les clics */
+}
+
+/* ===========================
+   Carte blanche centrale
+=========================== */
+.contact-card-wrapper{
+  position: relative; /* se place au-dessus du voile */
+  z-index: 1;
+}
+
+.contact-card{
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+/* Titre + petite barre bleue */
+.contact-underline{
+  display: inline-block;
+  width: 120px;
+  height: 3px;
+  background: #0d6efd;
+  border-radius: 2px;
+}
+
+/* Petites retouches formulaire / map */
+.contact-card .form-control{
+  border-radius: .5rem;
+}
+
+.ratio iframe{
+  border: 0; /* supprime la bordure par défaut sur certains navigateurs */
+}
+
+/* Un peu plus d’air en très petits écrans */
+@media (max-width: 575.98px){
+  .contact-card{ padding: 20px; }
+}

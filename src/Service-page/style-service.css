@@ -1,0 +1,56 @@
+  /* Bannière bleue (image de fond pleine largeur) */
+.service-banner{
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Petite barre bleue sous le sous-titre */
+.service-underline{
+  width: 120px;
+  height: 4px;
+  background: #0d6efd;
+  border-radius: 3px;
+}
+
+/* Carte de service : fond blanc, arrondis, ombre légère (maquette) */
+.service-card{
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  border: 1px solid rgba(0,0,0,.05);
+  text-align: center;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+/* L’icône est dans un petit cercle très léger */
+.service-icon-wrap{
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #f4f8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icône (Font Awesome) par défaut en bleu Bootstrap */
+.service-icon{
+  font-size: 26px;
+  color: #0d6efd;
+  transition: color .2s ease;
+}
+
+/* Effet demandé : survol = icône devient #cde1f8 */
+.service-card:hover .service-icon{
+  color: #cde1f8;
+}
+
+/* Petit lift visuel au survol (option esthétique) */
+.service-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+}

@@ -1,0 +1,21 @@
+  /* Bannière bleue (image de fond) */
+.blog-banner{
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Petite barre bleue sous le sous-titre */
+.blog-underline{
+  width: 120px;
+  height: 4px;
+  background: #0d6efd;
+  border-radius: 3px;
+}
+
+/* Vignettes des articles : mêmes dimensions pour un rendu aligné */
+.blog-thumb{
+  height: 180px;
+  object-fit: cover;   /* évite la déformation, recadre proprement */
+}

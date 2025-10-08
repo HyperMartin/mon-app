@@ -1,0 +1,22 @@
+  /* Bande bleue haute : image de fond plein écran horizontal */
+.reali-banner{
+  height: 160px;                  /* hauteur visuelle de la bannière */
+  background-size: cover;         /* couvre toute la largeur */
+  background-position: center;    /* centrer l’effet */
+  background-repeat: no-repeat;
+}
+
+/* Petite barre bleue sous le sous-titre de la page */
+.reali-underline{
+  width: 120px;
+  height: 4px;
+  background: #0d6efd;            /* bleu de la charte */
+  border-radius: 3px;
+}
+
+/* Harmonisation des cartes */
+.card-img-top{
+  object-fit: cover;              /* évite la déformation des images */
+  height: 180px;                  /* mêmes hauteurs pour un alignement propre */
+}
+

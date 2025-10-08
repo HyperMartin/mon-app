@@ -1,0 +1,43 @@
+ /* ----- Style de la barre de navigation ----- */
+.site-header .navbar { 
+  background:#1e1e1e; /* Fond gris très foncé (couleur des titres dans la charte) */
+  box-shadow:0 2px 6px rgba(0,0,0,.15); /* Petite ombre en bas du header pour détacher du contenu */
+}
+
+/* ----- Logo texte (navbar-brand = classe Bootstrap) ----- */
+.site-header .navbar-brand { 
+  color:#fff; /* Logo en blanc */
+  letter-spacing:.4px; /* Espacement léger entre les lettres pour un rendu plus élégant */
+}
+
+/* ----- Liens du menu ----- */
+.site-header .nav-link {
+  color:rgba(255,255,255,.75); /* Couleur gris clair pour un effet un peu atténué */
+  padding:.9rem 1rem; /* Espacement interne vertical et horizontal */
+  border-radius:.5rem; /* Coins légèrement arrondis au survol */
+  transition:background-color .2s ease, color .2s ease; /* Animation douce au hover */
+}
+
+/* ----- Effet hover (survol des liens) ----- */
+.site-header .nav-link:hover { 
+  background:rgba(255,255,255,.08); /* Fond blanc très transparent (0.08) */
+  color:#fff; /* Texte en blanc pur */
+}
+
+/* ----- Lien actif (page courante) ----- */
+.site-header .nav-link.active { 
+  color:#fff; /* Texte bien visible en blanc */
+  position:relative; /* Nécessaire pour placer le soulignage avec ::after */
+}
+
+/* ----- Soulignage bleu sous le lien actif ----- */
+.site-header .nav-link.active::after {
+  content:""; /* Élément virtuel vide (sert juste de décoratif) */
+  position:absolute; /* Positionnement relatif au lien */
+  left:1rem; /* Décalage depuis le bord gauche du lien */
+  right:1rem; /* Décalage depuis le bord droit */
+  bottom:.4rem; /* Positionné légèrement au-dessus du bas du texte */
+  height:3px; /* Épaisseur du trait */
+  background:#0d6efd; /* Couleur bleue principale (charte Bootstrap) */
+  border-radius:2px; /* Coins arrondis pour adoucir le soulignage */
+}
